@@ -1,0 +1,193 @@
+{
+  "compositeWidth" : 1100,
+  "windowRect" : {
+    "y" : 0,
+    "x" : 0,
+    "width" : 0,
+    "height" : 0
+  },
+  "items" : [
+    {
+      "x" : 0,
+      "localizedExplanation" : "inserts and formats text into segments of the video.",
+      "localizedName" : "The Title Panel",
+      "y" : 0,
+      "height" : 522,
+      "width" : 1100,
+      "isSimulated" : false,
+      "explanation" : "inserts and formats text into segments of the video.",
+      "flagDoNotFill" : false,
+      "name" : "The Title Panel"
+    },
+    {
+      "x" : 459,
+      "localizedExplanation" : "shows the start, finish and length of the video segment to which the title will be applied.",
+      "localizedName" : "The Title Range Label",
+      "y" : 36,
+      "height" : 16,
+      "width" : 182.5,
+      "isSimulated" : false,
+      "explanation" : "shows the start, finish and length of the video segment to which the title will be applied.",
+      "flagDoNotFill" : false,
+      "name" : "The Title Range Label"
+    },
+    {
+      "x" : 11,
+      "localizedExplanation" : "lists the titles you have applied to the video.",
+      "localizedName" : "The Table View",
+      "y" : 68,
+      "height" : 393,
+      "width" : 185,
+      "isSimulated" : false,
+      "explanation" : "lists the titles you have applied to the video.",
+      "flagDoNotFill" : false,
+      "name" : "The Table View"
+    },
+    {
+      "x" : 10,
+      "localizedExplanation" : "deletes the selected title.",
+      "localizedName" : "The Delete Button",
+      "y" : 469,
+      "height" : 34,
+      "width" : 92.5,
+      "isSimulated" : false,
+      "explanation" : "deletes the selected title.",
+      "flagDoNotFill" : false,
+      "name" : "The Delete Button"
+    },
+    {
+      "x" : 104.5,
+      "localizedExplanation" : "adds a new title to the list.",
+      "localizedName" : "The Add Button",
+      "y" : 469,
+      "height" : 34,
+      "width" : 92.5,
+      "isSimulated" : false,
+      "explanation" : "adds a new title to the list.",
+      "flagDoNotFill" : false,
+      "name" : "The Add Button"
+    },
+    {
+      "x" : 217.5,
+      "localizedExplanation" : "shows the first, middle, and last video frame to which the title will be applied.",
+      "localizedName" : "The Frame Preview",
+      "y" : 67,
+      "height" : 160,
+      "width" : 865,
+      "isSimulated" : false,
+      "explanation" : "shows the first, middle, and last video frame to which the title will be applied.",
+      "flagDoNotFill" : false,
+      "name" : "The Frame Preview"
+    },
+    {
+      "x" : 210,
+      "localizedExplanation" : "selects the time range in the video to which the selected title will be applied. Slide, click or ⇧-click to change the selection. Use the buttons at each end to adjust the ends of the range by one second at a time.",
+      "localizedName" : "The  Range Slider",
+      "y" : 235,
+      "height" : 20,
+      "width" : 880,
+      "isSimulated" : false,
+      "explanation" : "selects the time range in the video to which the selected title will be applied. Slide, click or ⇧-click to change the selection. Use the buttons at each end to adjust the ends of the range by one second at a time.",
+      "flagDoNotFill" : false,
+      "name" : "The  Range Slider"
+    },
+    {
+      "x" : 265,
+      "localizedExplanation" : "shows the title that will be applied. Click to edit.",
+      "localizedName" : "The Title",
+      "y" : 278,
+      "height" : 24,
+      "width" : 516,
+      "isSimulated" : false,
+      "explanation" : "shows the title that will be applied. Click to edit.",
+      "flagDoNotFill" : false,
+      "name" : "The Title"
+    },
+    {
+      "x" : 265,
+      "localizedExplanation" : "shows the subtitle that will be applied. Click to edit.",
+      "localizedName" : "The Subtitle",
+      "y" : 312,
+      "height" : 24,
+      "width" : 516,
+      "isSimulated" : false,
+      "explanation" : "shows the subtitle that will be applied. Click to edit.",
+      "flagDoNotFill" : false,
+      "name" : "The Subtitle"
+    },
+    {
+      "x" : 443,
+      "localizedExplanation" : "positions the title text in the video frame. Click to select the desired position.",
+      "localizedName" : "The Text Placement Control",
+      "y" : 360,
+      "height" : 90,
+      "width" : 160,
+      "isSimulated" : false,
+      "explanation" : "positions the title text in the video frame. Click to select the desired position.",
+      "flagDoNotFill" : false,
+      "name" : "The Text Placement Control"
+    },
+    {
+      "x" : 443,
+      "localizedExplanation" : "sets how far from the edge of the video frame the titles will appear.",
+      "localizedName" : "The Text Placement Offset Control",
+      "y" : 458,
+      "height" : 16,
+      "width" : 160,
+      "isSimulated" : false,
+      "explanation" : "sets how far from the edge of the video frame the titles will appear.",
+      "flagDoNotFill" : false,
+      "name" : "The Text Placement Offset Control"
+    },
+    {
+      "x" : 835,
+      "localizedExplanation" : "set the font family, style, size and color that will be applied.",
+      "localizedName" : "The Font Controls",
+      "y" : 272,
+      "height" : 175,
+      "width" : 254,
+      "isSimulated" : false,
+      "explanation" : "set the font family, style, size and color that will be applied.",
+      "flagDoNotFill" : false,
+      "name" : "The Font Controls"
+    },
+    {
+      "x" : 792.5,
+      "localizedExplanation" : "opens a window that plays a preview of the selected title.",
+      "localizedName" : "The Preview button",
+      "y" : 478,
+      "height" : 24,
+      "width" : 72,
+      "isSimulated" : false,
+      "explanation" : "opens a window that plays a preview of the selected title.",
+      "flagDoNotFill" : false,
+      "name" : "The Preview button"
+    },
+    {
+      "x" : 876.5,
+      "localizedExplanation" : "discards the changes you made and quits this panel.",
+      "localizedName" : "The Cancel button",
+      "y" : 478,
+      "height" : 24,
+      "width" : 66,
+      "isSimulated" : false,
+      "explanation" : "discards the changes you made and quits this panel.",
+      "flagDoNotFill" : false,
+      "name" : "The Cancel button"
+    },
+    {
+      "x" : 950.5,
+      "localizedExplanation" : "saves any changes you made and quits this panel.",
+      "localizedName" : "The Apply Button",
+      "y" : 478,
+      "height" : 24,
+      "width" : 129.5,
+      "isSimulated" : false,
+      "explanation" : "saves any changes you made and quits this panel.",
+      "flagDoNotFill" : false,
+      "name" : "The Apply Button"
+    }
+  ],
+  "title" : "The Title Panel",
+  "compositeHeight" : 522
+}

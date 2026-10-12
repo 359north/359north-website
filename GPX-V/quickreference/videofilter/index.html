@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>The Filter Panel</title>
+<link rel="stylesheet" href="../tutorial.css">
+</head>
+<body style="min-height: 100vh; margin: 0; background-image: linear-gradient(var(--bg-start), var(--bg-end)); background-repeat: no-repeat; background-size: cover;">
+<a class="home" href="../index.html" title="GPX-V Quick Reference Home"><img src="../home-icon.png" alt=""> GPX-V Quick Reference Home</a>
+<h1>The Filter Panel</h1>
+<div class="caption" style="max-width: 1106px;"><span class="title" id="capTitle"></span> <span id="capExplanation"></span></div>
+<div class="tutorial" id="tutorial" style="aspect-ratio: 1106 / 731; max-width: 1106px;">
+<img src="screenshot.png" alt="Tutorial screenshot">
+<div class="hotspot topmost" id="item-0" data-index="0" data-title="The Filter Panel" data-explanation="defines and applies filters to segments of the video." style="left:0.0000%; top:0.0000%; width:100.0000%; height:100.0000%;" title="The Filter Panel"></div>
+<div class="hotspot" id="item-1" data-index="1" data-title="The Range Label" data-explanation="shows the start, finish and length of the video segment to which the filter will be applied." style="left:40.9584%; top:6.2927%; width:18.1284%; height:2.1888%;" title="The Range Label"></div>
+<div class="hotspot" id="item-2" data-index="2" data-title="The Table View" data-explanation="lists the filters you have applied to the video." style="left:1.8987%; top:11.3543%; width:16.7269%; height:80.3010%;" title="The Table View"></div>
+<div class="hotspot" id="item-3" data-index="3" data-title="The Delete Button" data-explanation="deletes the selected filter." style="left:1.8083%; top:92.7497%; width:8.3635%; height:4.6512%;" title="The Delete Button"></div>
+<div class="hotspot" id="item-4" data-index="4" data-title="The Add Button" data-explanation="adds a new filter to the list." style="left:10.1718%; top:92.7497%; width:8.3635%; height:4.6512%;" title="The Add Button"></div>
+<div class="hotspot" id="item-5" data-index="5" data-title="The Preview Frames" data-explanation="shows the effect of the applied filter on the first, middle, and last video frame selected." style="left:19.9367%; top:14.2271%; width:78.2098%; height:21.8878%;" title="The Preview Frames"></div>
+<div class="hotspot" id="item-6" data-index="6" data-title="The Original Frames" data-explanation="shows the first, middle, and last video frames to which the filter will be applied." style="left:19.9367%; top:37.2093%; width:78.2098%; height:21.8878%;" title="The Original Frames"></div>
+<div class="hotspot" id="item-7" data-index="7" data-title="The Range Slider" data-explanation="selects the time range in the video to which the selected filter will be applied. Slide, click or ⇧-click to change the selection. Use the buttons at each end to adjust the ends of the range by one second at a time." style="left:19.9367%; top:63.2011%; width:78.2098%; height:2.7360%;" title="The Range Slider"></div>
+<div class="hotspot" id="item-8" data-index="8" data-title="The Color Temperature Slider" data-explanation="adjusts the color temperature of the applied filter." style="left:46.3382%; top:72.9138%; width:25.4069%; height:2.1888%;" title="The Color Temperature Slider"></div>
+<div class="hotspot" id="item-9" data-index="9" data-title="The Color Tint Slider" data-explanation="adjusts the tint of the applied filter." style="left:46.3382%; top:76.7442%; width:25.4069%; height:2.1888%;" title="The Color Tint Slider"></div>
+<div class="hotspot" id="item-10" data-index="10" data-title="The Gamma Slider" data-explanation="adjusts the gamma (mid-tone lift) of the applied filter." style="left:46.3382%; top:80.5746%; width:25.4069%; height:2.1888%;" title="The Gamma Slider"></div>
+<div class="hotspot" id="item-11" data-index="11" data-title="The Highlight Protection Slider" data-explanation="adjusts the highlight protection of the applied filter." style="left:46.3382%; top:84.4049%; width:25.4069%; height:2.1888%;" title="The Highlight Protection Slider"></div>
+<div class="hotspot" id="item-12" data-index="12" data-title="The Shadow Lift Slider" data-explanation="adjusts the shadow lift of the applied filter." style="left:46.3382%; top:88.2353%; width:25.4069%; height:2.1888%;" title="The Shadow Lift Slider"></div>
+<div class="hotspot" id="item-13" data-index="13" data-title="The Preview button" data-explanation="opens a window that plays a preview of the applied filter." style="left:72.1971%; top:93.9808%; width:6.5099%; height:3.2832%;" title="The Preview button"></div>
+<div class="hotspot" id="item-14" data-index="14" data-title="The Cancel button" data-explanation="discards the changes you made and quits this panel." style="left:79.7920%; top:93.9808%; width:5.9675%; height:3.2832%;" title="The Cancel button"></div>
+<div class="hotspot" id="item-15" data-index="15" data-title="The Apply button" data-explanation="applies the changes you made and quits this panel" style="left:86.4828%; top:93.9808%; width:11.7089%; height:3.2832%;" title="The Apply button"></div>
+</div>
+<p>This panel applies filters to selected video time segments.</p>
+<p>Use the controls to set the precise time interval, and the sliders to set the effect you wish to apply.</p>
+<p>The Preview button shows you the filter in action, before you apply or update it.</p>
+<p>Move your pointer over the images above to see feature explanations.</p>
+<script>
+(function(){
+  var hs = document.querySelectorAll('.hotspot');
+  var ct = document.getElementById('capTitle');
+  var ce = document.getElementById('capExplanation');
+  var active = null;
+  function show(h){ if (active) active.classList.remove('active'); active = h; if (h) h.classList.add('active'); ct.textContent = h ? h.getAttribute('data-title') : ''; ce.textContent = h ? h.getAttribute('data-explanation') : ''; }
+  hs.forEach(function(h){ h.addEventListener('mouseenter', function(){ show(h); }); h.addEventListener('click', function(){ show(h); }); });
+  var initial = null;
+  if (location.hash && location.hash.length > 1) { initial = document.getElementById(location.hash.substring(1)); if (initial && !initial.classList.contains('hotspot')) initial = null; }
+  if (!initial && hs.length > 0) initial = hs[0];
+  if (initial) show(initial);
+})();
+</script>
+<script>
+(function(){
+  var FROM = "quickreference", TO = "quickreferencedark", SELF_IS_DARK = false;
+  function go(){
+    if (!window.matchMedia) return;
+    var dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (dark === SELF_IS_DARK) return;
+    var seg = '/' + FROM + '/';
+    var path = location.pathname;
+    if (path.indexOf(seg) < 0) return;
+    var newPath = path.replace(seg, '/' + TO + '/');
+    location.replace(newPath + location.search + location.hash);
+  }
+  go();
+  if (window.matchMedia) {
+    var mq = window.matchMedia('(prefers-color-scheme: dark)');
+    if (mq.addEventListener) { mq.addEventListener('change', go); } else if (mq.addListener) { mq.addListener(go); }
+  }
+})();
+</script>
+</body>
+</html>

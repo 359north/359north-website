@@ -1,0 +1,109 @@
+{
+  "compositeWidth" : 1088,
+  "windowRect" : {
+    "y" : 0,
+    "x" : 0,
+    "width" : 0,
+    "height" : 0
+  },
+  "items" : [
+    {
+      "x" : 0,
+      "localizedExplanation" : "constructs a route using Apple Maps and online services between user selected trackpoints",
+      "localizedName" : "The Autoroute Panel",
+      "y" : 0,
+      "height" : 600,
+      "width" : 1088,
+      "isSimulated" : false,
+      "explanation" : "constructs a route using Apple Maps and online services between user selected trackpoints",
+      "flagDoNotFill" : false,
+      "name" : "The Autoroute Panel"
+    },
+    {
+      "x" : 442.5,
+      "localizedExplanation" : "shows the video and trackpoint time interval you have selected.",
+      "localizedName" : "The Time Range ",
+      "y" : 36,
+      "height" : 16,
+      "width" : 203,
+      "isSimulated" : false,
+      "explanation" : "shows the video and trackpoint time interval you have selected.",
+      "flagDoNotFill" : false,
+      "name" : "The Time Range "
+    },
+    {
+      "x" : 10,
+      "localizedExplanation" : "shows the existing route, the selected segment, and the expected interpolation.",
+      "localizedName" : "The Route Map",
+      "y" : 65,
+      "height" : 343,
+      "width" : 1068,
+      "isSimulated" : false,
+      "explanation" : "shows the existing route, the selected segment, and the expected interpolation.",
+      "flagDoNotFill" : false,
+      "name" : "The Route Map"
+    },
+    {
+      "x" : 10,
+      "localizedExplanation" : "show the elevation and gradients of the route, with selection.`",
+      "localizedName" : "The Elevation Chart",
+      "y" : 414,
+      "height" : 80,
+      "width" : 1068,
+      "isSimulated" : false,
+      "explanation" : "show the elevation and gradients of the route, with selection.`",
+      "flagDoNotFill" : false,
+      "name" : "The Elevation Chart"
+    },
+    {
+      "x" : 430.5,
+      "localizedExplanation" : "chooses between Bicycle, Automobile, Walking or Any routing using Apple Maps.",
+      "localizedName" : "The Autoroute Type Control",
+      "y" : 504,
+      "height" : 24,
+      "width" : 336,
+      "isSimulated" : false,
+      "explanation" : "chooses between Bicycle, Automobile, Walking or Any routing using Apple Maps.",
+      "flagDoNotFill" : false,
+      "name" : "The Autoroute Type Control"
+    },
+    {
+      "x" : 18,
+      "localizedExplanation" : "describes the trackpoints you have selected for automatic routing.",
+      "localizedName" : "The Summary Label",
+      "y" : 564,
+      "height" : 16,
+      "width" : 196.5,
+      "isSimulated" : false,
+      "explanation" : "describes the trackpoints you have selected for automatic routing.",
+      "flagDoNotFill" : false,
+      "name" : "The Summary Label"
+    },
+    {
+      "x" : 1009,
+      "localizedExplanation" : "inserts the autorouted trackpoints into your route.",
+      "localizedName" : "The Apply Button",
+      "y" : 561,
+      "height" : 24,
+      "width" : 59,
+      "isSimulated" : false,
+      "explanation" : "inserts the autorouted trackpoints into your route.",
+      "flagDoNotFill" : false,
+      "name" : "The Apply Button"
+    },
+    {
+      "x" : 935,
+      "localizedExplanation" : "closes this panel without making any changes.",
+      "localizedName" : "The Cancel Button",
+      "y" : 561,
+      "height" : 24,
+      "width" : 66,
+      "isSimulated" : false,
+      "explanation" : "closes this panel without making any changes.",
+      "flagDoNotFill" : false,
+      "name" : "The Cancel Button"
+    }
+  ],
+  "title" : "The Autoroute Panel",
+  "compositeHeight" : 600
+}

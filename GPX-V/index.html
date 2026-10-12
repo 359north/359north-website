@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GPX-V</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="top-link-row"><a class="up" href="../index.html">← 359 North</a></div>
+<header class="app-header"><img class="app-icon" src="home-icon.png" alt=""></header>
+<h1>GPX-V</h1>
+<p class="main-subtitle">Video and GPS. Perfectly in sync.</p>
+<div class="split">
+<div class="split-cards">
+<div class="sections">
+<a class="app-card" href="quickreference/index.html" data-folder-dark="quickreferencedark">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="quickreferencedark/main/thumb.jpg">
+    <img class="thumb" src="quickreference/main/thumb.jpg" alt="">
+  </picture>
+  <div class="text">
+    <div class="card-title">Quick Reference</div>
+  </div>
+</a>
+</div>
+</div>
+<div class="split-text">
+<p>Turn video and GPS data into perfectly synced training files—ready to upload, every time.</p>
+<p>GPX-V brings everything together in one elegant macOS app. Trim your footage, synchronize video and GPS, and fine-tune the results with precision.</p>
+<p>Add titles and subtitles with ease.
+Improve visibility in deep forest shade or harsh sunlight.
+No GPS track? GPX-V can generate an exceptionally accurate one for you.</p>
+<p>Captured video at 120 fps or higher? Slow it down smoothly to match real-world cycling speed.</p>
+<p>Export clean, standards-compliant .mp4 and .gpx files for Kinomap, Rouvy, and other training platforms.</p>
+<p>Stop juggling multiple tools.</p>
+<p>GPX-V does it all—simply, reliably, and beautifully—on macOS.</p>
+</div>
+</div>
+<script>
+(function(){
+  function isDark(){ return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches; }
+  function apply(){
+    var dark = isDark();
+    document.querySelectorAll('a.app-card').forEach(function(a){
+      var darkFolder = a.getAttribute('data-folder-dark');
+      if (!darkFolder) return;
+      var light = a.getAttribute('data-href-light');
+      if (!light) { light = a.getAttribute('href'); a.setAttribute('data-href-light', light); }
+      a.setAttribute('href', dark ? (darkFolder + '/index.html') : light);
+    });
+  }
+  apply();
+  if (window.matchMedia) {
+    var mq = window.matchMedia('(prefers-color-scheme: dark)');
+    if (mq.addEventListener) { mq.addEventListener('change', apply); } else if (mq.addListener) { mq.addListener(apply); }
+  }
+})();
+</script>
+</body>
+</html>

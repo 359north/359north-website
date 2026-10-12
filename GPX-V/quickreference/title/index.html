@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>The Title Panel</title>
+<link rel="stylesheet" href="../tutorial.css">
+</head>
+<body style="min-height: 100vh; margin: 0; background-image: linear-gradient(var(--bg-start), var(--bg-end)); background-repeat: no-repeat; background-size: cover;">
+<a class="home" href="../index.html" title="GPX-V Quick Reference Home"><img src="../home-icon.png" alt=""> GPX-V Quick Reference Home</a>
+<h1>The Title Panel</h1>
+<div class="caption" style="max-width: 1100px;"><span class="title" id="capTitle"></span> <span id="capExplanation"></span></div>
+<div class="tutorial" id="tutorial" style="aspect-ratio: 1100 / 522; max-width: 1100px;">
+<img src="screenshot.png" alt="Tutorial screenshot">
+<div class="hotspot topmost" id="item-0" data-index="0" data-title="The Title Panel" data-explanation="inserts and formats text into segments of the video." style="left:0.0000%; top:0.0000%; width:100.0000%; height:100.0000%;" title="The Title Panel"></div>
+<div class="hotspot" id="item-1" data-index="1" data-title="The Title Range Label" data-explanation="shows the start, finish and length of the video segment to which the title will be applied." style="left:41.7273%; top:6.8966%; width:16.5909%; height:3.0651%;" title="The Title Range Label"></div>
+<div class="hotspot" id="item-2" data-index="2" data-title="The Table View" data-explanation="lists the titles you have applied to the video." style="left:1.0000%; top:13.0268%; width:16.8182%; height:75.2874%;" title="The Table View"></div>
+<div class="hotspot" id="item-3" data-index="3" data-title="The Delete Button" data-explanation="deletes the selected title." style="left:0.9091%; top:89.8467%; width:8.4091%; height:6.5134%;" title="The Delete Button"></div>
+<div class="hotspot" id="item-4" data-index="4" data-title="The Add Button" data-explanation="adds a new title to the list." style="left:9.5000%; top:89.8467%; width:8.4091%; height:6.5134%;" title="The Add Button"></div>
+<div class="hotspot" id="item-5" data-index="5" data-title="The Frame Preview" data-explanation="shows the first, middle, and last video frame to which the title will be applied." style="left:19.7727%; top:12.8352%; width:78.6364%; height:30.6513%;" title="The Frame Preview"></div>
+<div class="hotspot" id="item-6" data-index="6" data-title="The  Range Slider" data-explanation="selects the time range in the video to which the selected title will be applied. Slide, click or ⇧-click to change the selection. Use the buttons at each end to adjust the ends of the range by one second at a time." style="left:19.0909%; top:45.0192%; width:80.0000%; height:3.8314%;" title="The  Range Slider"></div>
+<div class="hotspot" id="item-7" data-index="7" data-title="The Title" data-explanation="shows the title that will be applied. Click to edit." style="left:24.0909%; top:53.2567%; width:46.9091%; height:4.5977%;" title="The Title"></div>
+<div class="hotspot" id="item-8" data-index="8" data-title="The Subtitle" data-explanation="shows the subtitle that will be applied. Click to edit." style="left:24.0909%; top:59.7701%; width:46.9091%; height:4.5977%;" title="The Subtitle"></div>
+<div class="hotspot" id="item-9" data-index="9" data-title="The Text Placement Control" data-explanation="positions the title text in the video frame. Click to select the desired position." style="left:40.2727%; top:68.9655%; width:14.5455%; height:17.2414%;" title="The Text Placement Control"></div>
+<div class="hotspot" id="item-10" data-index="10" data-title="The Text Placement Offset Control" data-explanation="sets how far from the edge of the video frame the titles will appear." style="left:40.2727%; top:87.7395%; width:14.5455%; height:3.0651%;" title="The Text Placement Offset Control"></div>
+<div class="hotspot" id="item-11" data-index="11" data-title="The Font Controls" data-explanation="set the font family, style, size and color that will be applied." style="left:75.9091%; top:52.1073%; width:23.0909%; height:33.5249%;" title="The Font Controls"></div>
+<div class="hotspot" id="item-12" data-index="12" data-title="The Preview button" data-explanation="opens a window that plays a preview of the selected title." style="left:72.0455%; top:91.5709%; width:6.5455%; height:4.5977%;" title="The Preview button"></div>
+<div class="hotspot" id="item-13" data-index="13" data-title="The Cancel button" data-explanation="discards the changes you made and quits this panel." style="left:79.6818%; top:91.5709%; width:6.0000%; height:4.5977%;" title="The Cancel button"></div>
+<div class="hotspot" id="item-14" data-index="14" data-title="The Apply Button" data-explanation="saves any changes you made and quits this panel." style="left:86.4091%; top:91.5709%; width:11.7727%; height:4.5977%;" title="The Apply Button"></div>
+</div>
+<p>This panel inserts titles and subtitles over video segments.</p>
+<p>You can adjust placement, font name, style, size, and color, and see a preview of each title you apply.</p>
+<p>Move your pointer over the images above to see feature explanations.</p>
+<script>
+(function(){
+  var hs = document.querySelectorAll('.hotspot');
+  var ct = document.getElementById('capTitle');
+  var ce = document.getElementById('capExplanation');
+  var active = null;
+  function show(h){ if (active) active.classList.remove('active'); active = h; if (h) h.classList.add('active'); ct.textContent = h ? h.getAttribute('data-title') : ''; ce.textContent = h ? h.getAttribute('data-explanation') : ''; }
+  hs.forEach(function(h){ h.addEventListener('mouseenter', function(){ show(h); }); h.addEventListener('click', function(){ show(h); }); });
+  var initial = null;
+  if (location.hash && location.hash.length > 1) { initial = document.getElementById(location.hash.substring(1)); if (initial && !initial.classList.contains('hotspot')) initial = null; }
+  if (!initial && hs.length > 0) initial = hs[0];
+  if (initial) show(initial);
+})();
+</script>
+<script>
+(function(){
+  var FROM = "quickreference", TO = "quickreferencedark", SELF_IS_DARK = false;
+  function go(){
+    if (!window.matchMedia) return;
+    var dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (dark === SELF_IS_DARK) return;
+    var seg = '/' + FROM + '/';
+    var path = location.pathname;
+    if (path.indexOf(seg) < 0) return;
+    var newPath = path.replace(seg, '/' + TO + '/');
+    location.replace(newPath + location.search + location.hash);
+  }
+  go();
+  if (window.matchMedia) {
+    var mq = window.matchMedia('(prefers-color-scheme: dark)');
+    if (mq.addEventListener) { mq.addEventListener('change', go); } else if (mq.addListener) { mq.addListener(go); }
+  }
+})();
+</script>
+</body>
+</html>

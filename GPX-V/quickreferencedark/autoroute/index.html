@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>The Autoroute Panel</title>
+<link rel="stylesheet" href="../tutorial.css">
+</head>
+<body style="min-height: 100vh; margin: 0; background-image: linear-gradient(var(--bg-start), var(--bg-end)); background-repeat: no-repeat; background-size: cover;">
+<a class="home" href="../index.html" title="GPX-V Quick Reference Home"><img src="../home-icon.png" alt=""> GPX-V Quick Reference Home</a>
+<h1>The Autoroute Panel</h1>
+<div class="caption" style="max-width: 1088px;"><span class="title" id="capTitle"></span> <span id="capExplanation"></span></div>
+<div class="tutorial" id="tutorial" style="aspect-ratio: 1088 / 600; max-width: 1088px;">
+<img src="screenshot.png" alt="Tutorial screenshot">
+<div class="hotspot topmost" id="item-0" data-index="0" data-title="The Autoroute Panel" data-explanation="constructs a route using Apple Maps and online services between user selected trackpoints" style="left:0.0000%; top:0.0000%; width:100.0000%; height:100.0000%;" title="The Autoroute Panel"></div>
+<div class="hotspot" id="item-1" data-index="1" data-title="The Time Range " data-explanation="shows the video and trackpoint time interval you have selected." style="left:40.6710%; top:6.0000%; width:18.6581%; height:2.6667%;" title="The Time Range "></div>
+<div class="hotspot" id="item-2" data-index="2" data-title="The Route Map" data-explanation="shows the existing route, the selected segment, and the expected interpolation." style="left:0.9191%; top:10.8333%; width:98.1618%; height:57.1667%;" title="The Route Map"></div>
+<div class="hotspot" id="item-3" data-index="3" data-title="The Elevation Chart" data-explanation="show the elevation and gradients of the route, with selection.`" style="left:0.9191%; top:69.0000%; width:98.1618%; height:13.3333%;" title="The Elevation Chart"></div>
+<div class="hotspot" id="item-4" data-index="4" data-title="The Autoroute Type Control" data-explanation="chooses between Bicycle, Automobile, Walking or Any routing using Apple Maps." style="left:39.5680%; top:84.0000%; width:30.8824%; height:4.0000%;" title="The Autoroute Type Control"></div>
+<div class="hotspot" id="item-5" data-index="5" data-title="The Summary Label" data-explanation="describes the trackpoints you have selected for automatic routing." style="left:1.6544%; top:94.0000%; width:18.0607%; height:2.6667%;" title="The Summary Label"></div>
+<div class="hotspot" id="item-6" data-index="6" data-title="The Apply Button" data-explanation="inserts the autorouted trackpoints into your route." style="left:92.7390%; top:93.5000%; width:5.4228%; height:4.0000%;" title="The Apply Button"></div>
+<div class="hotspot" id="item-7" data-index="7" data-title="The Cancel Button" data-explanation="closes this panel without making any changes." style="left:85.9375%; top:93.5000%; width:6.0662%; height:4.0000%;" title="The Cancel Button"></div>
+</div>
+<p>This panel can automatically place trackpoints between two widely separated trackpoints you select.</p>
+<p>It can replace trackpoints from a GPX file that are not sufficiently accurate.</p>
+<p>You can also create an entire route from scratch, adding trackpoints at the beginning and end of your route, then interpolating.</p>
+<p>All the options use the same technology as Apple Maps to do the interpolation.</p>
+<p>When points are added, we contact appropriate web services (USGS, etc.) to obtain elevation data</p>
+<p>The output from this process can be significantly better than recorded GPS for services such as Kinomap and Rouvy.</p>
+<script>
+(function(){
+  var hs = document.querySelectorAll('.hotspot');
+  var ct = document.getElementById('capTitle');
+  var ce = document.getElementById('capExplanation');
+  var active = null;
+  function show(h){ if (active) active.classList.remove('active'); active = h; if (h) h.classList.add('active'); ct.textContent = h ? h.getAttribute('data-title') : ''; ce.textContent = h ? h.getAttribute('data-explanation') : ''; }
+  hs.forEach(function(h){ h.addEventListener('mouseenter', function(){ show(h); }); h.addEventListener('click', function(){ show(h); }); });
+  var initial = null;
+  if (location.hash && location.hash.length > 1) { initial = document.getElementById(location.hash.substring(1)); if (initial && !initial.classList.contains('hotspot')) initial = null; }
+  if (!initial && hs.length > 0) initial = hs[0];
+  if (initial) show(initial);
+})();
+</script>
+<script>
+(function(){
+  var FROM = "quickreferencedark", TO = "quickreference", SELF_IS_DARK = true;
+  function go(){
+    if (!window.matchMedia) return;
+    var dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (dark === SELF_IS_DARK) return;
+    var seg = '/' + FROM + '/';
+    var path = location.pathname;
+    if (path.indexOf(seg) < 0) return;
+    var newPath = path.replace(seg, '/' + TO + '/');
+    location.replace(newPath + location.search + location.hash);
+  }
+  go();
+  if (window.matchMedia) {
+    var mq = window.matchMedia('(prefers-color-scheme: dark)');
+    if (mq.addEventListener) { mq.addEventListener('change', go); } else if (mq.addListener) { mq.addListener(go); }
+  }
+})();
+</script>
+</body>
+</html>

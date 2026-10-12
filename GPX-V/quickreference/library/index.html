@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>The Library Window</title>
+<link rel="stylesheet" href="../tutorial.css">
+</head>
+<body style="min-height: 100vh; margin: 0; background-image: linear-gradient(var(--bg-start), var(--bg-end)); background-repeat: no-repeat; background-size: cover;">
+<a class="home" href="../index.html" title="GPX-V Quick Reference Home"><img src="../home-icon.png" alt=""> GPX-V Quick Reference Home</a>
+<h1>The Library Window</h1>
+<div class="caption" style="max-width: 1140px;"><span class="title" id="capTitle"></span> <span id="capExplanation"></span></div>
+<div class="tutorial" id="tutorial" style="aspect-ratio: 1140 / 592; max-width: 1140px;">
+<img src="screenshot.png" alt="Tutorial screenshot">
+<div class="hotspot topmost" id="item-0" data-index="0" data-title="The Library Window" data-explanation="displays all the projects you have created, across devices and volume." style="left:1.7544%; top:12.1622%; width:96.4912%; height:84.4595%;" title="The Library Window"></div>
+<div class="hotspot" id="item-1" data-index="1" data-title="The Library Summary" data-explanation="displays the total number of your projects, source video storage used, and distance covered." style="left:1.7544%; top:12.5000%; width:96.4912%; height:4.2230%;" title="The Library Summary"></div>
+<div class="hotspot" id="item-2" data-index="2" data-title="The Machine Popup" data-explanation="controls the devices from which you are displaying GPX-V projects in the Project Table." style="left:3.5088%; top:20.1014%; width:15.1316%; height:4.0541%;" title="The Machine Popup"></div>
+<div class="hotspot" id="item-3" data-index="3" data-title="The Volume Popup" data-explanation="controls the volumes from which you are displaying GPX-V projects in the Project Table." style="left:20.3947%; top:20.1014%; width:11.1404%; height:4.0541%;" title="The Volume Popup"></div>
+<div class="hotspot" id="item-4" data-index="4" data-title="The Project Table" data-explanation="displays projects and their associated data items." style="left:3.5965%; top:25.6757%; width:92.8070%; height:61.6554%;" title="The Project Table"></div>
+<div class="hotspot" id="item-5" data-index="5" data-title="The Notes Label" data-explanation="shows additional information as needed." style="left:4.1228%; top:89.8649%; width:12.7632%; height:2.7027%;" title="The Notes Label"></div>
+<div class="hotspot" id="item-6" data-index="6" data-title="The Scan Button" data-explanation="searches for projects in the folder you select." style="left:78.3772%; top:89.1892%; width:4.7807%; height:4.0541%;" title="The Scan Button"></div>
+<div class="hotspot" id="item-7" data-index="7" data-title="The Open Button" data-explanation="opens the selected project. You can also double-click the project in the table." style="left:84.2105%; top:89.1892%; width:5.0000%; height:4.0541%;" title="The Open Button"></div>
+<div class="hotspot" id="item-8" data-index="8" data-title="The Refresh Button" data-explanation="updates the list of projects." style="left:90.2632%; top:89.1892%; width:6.2281%; height:4.0541%;" title="The Refresh Button"></div>
+<div class="hotspot" id="item-9" data-index="9" data-title="The Apple Menu" data-explanation="shows About This Mac, System Settings..., Location, App Store, Recent Items, Sleep, Restart..., Shutdown..., Lock Screen, Log Out..." style="left:1.7544%; top:0.0000%; width:2.1930%; height:4.0541%;" title="The Apple Menu"></div>
+<div class="hotspot" id="item-10" data-index="10" data-title="The GPX-V Menu" data-explanation="shows About GPX-V, Settings..., Services, Hide GPX-V, Hide Others" style="left:3.9474%; top:0.0000%; width:4.7106%; height:4.0541%;" title="The GPX-V Menu"></div>
+<div class="hotspot" id="item-11" data-index="11" data-title="The File Menu" data-explanation="shows New, Open…, Open Recent, Import GPX..., Import Video..." style="left:8.6580%; top:0.0000%; width:2.9001%; height:4.0541%;" title="The File Menu"></div>
+<div class="hotspot" id="item-12" data-index="12" data-title="The Edit Menu" data-explanation="shows Undo, Redo, Cut, Copy, Paste" style="left:11.5581%; top:0.0000%; width:3.1017%; height:4.0541%;" title="The Edit Menu"></div>
+<div class="hotspot" id="item-13" data-index="13" data-title="The Format Menu" data-explanation="shows Font, Text" style="left:14.6598%; top:0.0000%; width:4.8200%; height:4.0541%;" title="The Format Menu"></div>
+<div class="hotspot" id="item-14" data-index="14" data-title="The Tools Menu" data-explanation="shows GPX, Video, Video &amp; GPX" style="left:19.4798%; top:0.0000%; width:3.8634%; height:4.0541%;" title="The Tools Menu"></div>
+<div class="hotspot" id="item-15" data-index="15" data-title="The View Menu" data-explanation="shows Show Tab Bar, Show All Tabs, Show Toolbar, Customize Toolbar…, Show Sidebar" style="left:23.3432%; top:0.0000%; width:3.6106%; height:4.0541%;" title="The View Menu"></div>
+<div class="hotspot" id="item-16" data-index="16" data-title="The Window Menu" data-explanation="shows Minimize, Minimize All, Zoom, Zoom All, Fill" style="left:26.9539%; top:0.0000%; width:5.2983%; height:4.0541%;" title="The Window Menu"></div>
+<div class="hotspot" id="item-17" data-index="17" data-title="The Help Menu" data-explanation="shows GPX-V Help, GPX-V Quick Reference, Welcome to GPX-V..." style="left:32.2522%; top:0.0000%; width:3.5082%; height:4.0541%;" title="The Help Menu"></div>
+</div>
+<p>The Library helps you keep track of all your GPX-V projects.</p>
+<p>Many users keep their videos on external drives, and the Library can help you find them.</p>
+<script>
+(function(){
+  var hs = document.querySelectorAll('.hotspot');
+  var ct = document.getElementById('capTitle');
+  var ce = document.getElementById('capExplanation');
+  var active = null;
+  function show(h){ if (active) active.classList.remove('active'); active = h; if (h) h.classList.add('active'); ct.textContent = h ? h.getAttribute('data-title') : ''; ce.textContent = h ? h.getAttribute('data-explanation') : ''; }
+  hs.forEach(function(h){ h.addEventListener('mouseenter', function(){ show(h); }); h.addEventListener('click', function(){ show(h); }); });
+  var initial = null;
+  if (location.hash && location.hash.length > 1) { initial = document.getElementById(location.hash.substring(1)); if (initial && !initial.classList.contains('hotspot')) initial = null; }
+  if (!initial && hs.length > 0) initial = hs[0];
+  if (initial) show(initial);
+})();
+</script>
+<script>
+(function(){
+  var FROM = "quickreference", TO = "quickreferencedark", SELF_IS_DARK = false;
+  function go(){
+    if (!window.matchMedia) return;
+    var dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (dark === SELF_IS_DARK) return;
+    var seg = '/' + FROM + '/';
+    var path = location.pathname;
+    if (path.indexOf(seg) < 0) return;
+    var newPath = path.replace(seg, '/' + TO + '/');
+    location.replace(newPath + location.search + location.hash);
+  }
+  go();
+  if (window.matchMedia) {
+    var mq = window.matchMedia('(prefers-color-scheme: dark)');
+    if (mq.addEventListener) { mq.addEventListener('change', go); } else if (mq.addListener) { mq.addListener(go); }
+  }
+})();
+</script>
+</body>
+</html>

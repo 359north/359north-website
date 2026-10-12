@@ -1,0 +1,133 @@
+{
+  "compositeWidth" : 1100,
+  "windowRect" : {
+    "y" : 0,
+    "x" : 0,
+    "width" : 0,
+    "height" : 0
+  },
+  "items" : [
+    {
+      "x" : 0,
+      "localizedExplanation" : "synchronizes the video and the GPS track using a single matching moment.",
+      "localizedName" : "Synchronize Panel",
+      "y" : 0,
+      "height" : 780,
+      "width" : 1100,
+      "isSimulated" : false,
+      "explanation" : "synchronizes the video and the GPS track using a single matching moment.",
+      "flagDoNotFill" : false,
+      "name" : "Synchronize Panel"
+    },
+    {
+      "x" : 10,
+      "localizedExplanation" : "show how to register the video against the GPS track: match a video frame to a trackpoint, then align.",
+      "localizedName" : "The Instructions",
+      "y" : 36.5,
+      "height" : 16,
+      "width" : 1080,
+      "isSimulated" : false,
+      "explanation" : "show how to register the video against the GPS track: match a video frame to a trackpoint, then align.",
+      "flagDoNotFill" : false,
+      "name" : "The Instructions"
+    },
+    {
+      "x" : 12,
+      "localizedExplanation" : "scrubs the video to a moment you can pinpoint on the map.",
+      "localizedName" : "The Video Player",
+      "y" : 73.5,
+      "height" : 359,
+      "width" : 532,
+      "isSimulated" : false,
+      "explanation" : "scrubs the video to a moment you can pinpoint on the map.",
+      "flagDoNotFill" : false,
+      "name" : "The Video Player"
+    },
+    {
+      "x" : 556,
+      "localizedExplanation" : "displays the GPS track; the selected trackpoint is marked with a pin. Shift-click the map to jump to the nearest trackpoint.",
+      "localizedName" : "The Route Map",
+      "y" : 73.5,
+      "height" : 359,
+      "width" : 532,
+      "isSimulated" : false,
+      "explanation" : "displays the GPS track; the selected trackpoint is marked with a pin. Shift-click the map to jump to the nearest trackpoint.",
+      "flagDoNotFill" : false,
+      "name" : "The Route Map"
+    },
+    {
+      "x" : 564,
+      "localizedExplanation" : "switches the map between standard and satellite imagery.",
+      "localizedName" : "The Map \/ Satellite Control",
+      "y" : 81.5,
+      "height" : 24,
+      "width" : 116.5,
+      "isSimulated" : false,
+      "explanation" : "switches the map between standard and satellite imagery.",
+      "flagDoNotFill" : false,
+      "name" : "The Map \/ Satellite Control"
+    },
+    {
+      "x" : 12,
+      "localizedExplanation" : " selects the trackpoint that matches the current video frame.",
+      "localizedName" : "The Trackpoint Table",
+      "y" : 444.5,
+      "height" : 259.5,
+      "width" : 1076,
+      "isSimulated" : false,
+      "explanation" : " selects the trackpoint that matches the current video frame.",
+      "flagDoNotFill" : false,
+      "name" : "The Trackpoint Table"
+    },
+    {
+      "x" : 10,
+      "localizedExplanation" : "shows how far the video will shift for the chosen pair, and whether it then overlaps the GPS track.",
+      "localizedName" : "The Summary",
+      "y" : 716,
+      "height" : 16,
+      "width" : 1080,
+      "isSimulated" : false,
+      "explanation" : "shows how far the video will shift for the chosen pair, and whether it then overlaps the GPS track.",
+      "flagDoNotFill" : false,
+      "name" : "The Summary"
+    },
+    {
+      "x" : 12,
+      "localizedExplanation" : "after aligning, trim the video and track down to the range they share.",
+      "localizedName" : "Trim Overlap",
+      "y" : 748,
+      "height" : 16,
+      "width" : 227.5,
+      "isSimulated" : false,
+      "explanation" : "after aligning, trim the video and track down to the range they share.",
+      "flagDoNotFill" : false,
+      "name" : "Trim Overlap"
+    },
+    {
+      "x" : 920,
+      "localizedExplanation" : "dismisses this sheet without changing the video-GPS alignment.",
+      "localizedName" : "The Cancel Button",
+      "y" : 744,
+      "height" : 24,
+      "width" : 66,
+      "isSimulated" : false,
+      "explanation" : "dismisses this sheet without changing the video-GPS alignment.",
+      "flagDoNotFill" : false,
+      "name" : "The Cancel Button"
+    },
+    {
+      "x" : 998,
+      "localizedExplanation" : "applies the computed shift so the video lines up with the GPS track.",
+      "localizedName" : "The Align Button",
+      "y" : 744,
+      "height" : 24,
+      "width" : 90,
+      "isSimulated" : false,
+      "explanation" : "applies the computed shift so the video lines up with the GPS track.",
+      "flagDoNotFill" : false,
+      "name" : "The Align Button"
+    }
+  ],
+  "title" : "The Synchronize Panel",
+  "compositeHeight" : 780
+}

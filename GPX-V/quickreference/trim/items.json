@@ -1,0 +1,121 @@
+{
+  "compositeWidth" : 899.5,
+  "windowRect" : {
+    "y" : 0,
+    "x" : 0,
+    "width" : 0,
+    "height" : 0
+  },
+  "items" : [
+    {
+      "x" : 0,
+      "localizedExplanation" : "trims the selected video and trackpoints.",
+      "localizedName" : "The Trim Panel",
+      "y" : 0,
+      "height" : 510,
+      "width" : 899.5,
+      "isSimulated" : false,
+      "explanation" : "trims the selected video and trackpoints.",
+      "flagDoNotFill" : false,
+      "name" : "The Trim Panel"
+    },
+    {
+      "x" : 337,
+      "localizedExplanation" : "shows the duration of the selected video and trackpoints.",
+      "localizedName" : "The Selected Range Label",
+      "y" : 36,
+      "height" : 16,
+      "width" : 225.5,
+      "isSimulated" : false,
+      "explanation" : "shows the duration of the selected video and trackpoints.",
+      "flagDoNotFill" : false,
+      "name" : "The Selected Range Label"
+    },
+    {
+      "x" : 17,
+      "localizedExplanation" : "displays the first, middle, and last video frame selected.",
+      "localizedName" : "The Video Frame Preview",
+      "y" : 85,
+      "height" : 160,
+      "width" : 865.5,
+      "isSimulated" : false,
+      "explanation" : "displays the first, middle, and last video frame selected.",
+      "flagDoNotFill" : false,
+      "name" : "The Video Frame Preview"
+    },
+    {
+      "x" : 17,
+      "localizedExplanation" : "displays the elevation along the route and your selection.",
+      "localizedName" : "The Elevation Chart",
+      "y" : 251,
+      "height" : 140,
+      "width" : 865.5,
+      "isSimulated" : false,
+      "explanation" : "displays the elevation along the route and your selection.",
+      "flagDoNotFill" : false,
+      "name" : "The Elevation Chart"
+    },
+    {
+      "x" : 17,
+      "localizedExplanation" : "selects the time range in the video and trackpoint list which will be deleted.",
+      "localizedName" : "The Range Slider",
+      "y" : 402,
+      "height" : 20,
+      "width" : 865.5,
+      "isSimulated" : false,
+      "explanation" : "selects the time range in the video and trackpoint list which will be deleted.",
+      "flagDoNotFill" : false,
+      "name" : "The Range Slider"
+    },
+    {
+      "x" : 316.5,
+      "localizedExplanation" : "describes your selected range.",
+      "localizedName" : "The Clip Summary",
+      "y" : 430,
+      "height" : 16,
+      "width" : 266,
+      "isSimulated" : false,
+      "explanation" : "describes your selected range.",
+      "flagDoNotFill" : false,
+      "name" : "The Clip Summary"
+    },
+    {
+      "x" : 413.5,
+      "localizedExplanation" : "plays a  preview of what your video will look like after the selection is deleted.",
+      "localizedName" : "The Preview Button",
+      "y" : 466,
+      "height" : 24,
+      "width" : 72,
+      "isSimulated" : false,
+      "explanation" : "plays a  preview of what your video will look like after the selection is deleted.",
+      "flagDoNotFill" : false,
+      "name" : "The Preview Button"
+    },
+    {
+      "x" : 755,
+      "localizedExplanation" : "closes the panel without making any changes.",
+      "localizedName" : "The Cancel Button",
+      "y" : 466,
+      "height" : 24,
+      "width" : 66,
+      "isSimulated" : false,
+      "explanation" : "closes the panel without making any changes.",
+      "flagDoNotFill" : false,
+      "name" : "The Cancel Button"
+    },
+    {
+      "x" : 829,
+      "localizedExplanation" : "removes the selected video and trackpoints from your project.",
+      "localizedName" : "The Trim Button",
+      "y" : 466,
+      "height" : 24,
+      "width" : 50.5,
+      "isSimulated" : false,
+      "explanation" : "removes the selected video and trackpoints from your project.",
+      "flagDoNotFill" : false,
+      "name" : "The Trim Button"
+    }
+  ],
+  "title" : "The Trim Panel",
+  "compositeHeight" : 510
+}

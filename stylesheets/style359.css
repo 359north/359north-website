@@ -1,0 +1,493 @@
+:root {
+	color-scheme: light dark;
+	--bg-start: #FFFFFF;
+	--bg-end: #D0E9FD;
+	--text: #00001f;
+	--muted: #636366;
+	--link: #3B86F7;
+	--hr: rgb(200,200,200);
+	--button-border: #0070c9;
+	--button-text: #0070c9;
+	--button-hover-bg: rgb(250,250,250);
+	--platforms: #409ad1;
+	--coming-soon: #6e6e73;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg-start: #1c1c1e;
+		--bg-end: #0e2440;
+		--text: #f5f5f7;
+		--muted: #aeaeb2;
+		--link: #0a84ff;
+		--hr: #3a3a3c;
+		--button-border: #0a84ff;
+		--button-text: #0a84ff;
+		--button-hover-bg: #2c2c2e;
+		--platforms: #64d2ff;
+		--coming-soon: #aeaeb2;
+	}
+}
+
+body {
+	line-height: 1.4;
+	font-weight: 400;
+	letter-spacing: -.005em;
+	font-family: "SF Pro Text","SF Pro Icons","Apple WebExp Icons Custom","Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-style: normal;
+	color: var(--text);
+	-webkit-font-smoothing: antialiased;
+
+	padding: 1em;
+	min-height: 100vh;
+	background-image: linear-gradient(var(--bg-start), var(--bg-end));
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.navigationwrapper {
+	height: 32px;
+	line-height: 1.5;
+	position: relative;
+}
+.navigation-left {
+	position: absolute;
+	right: auto;
+	left: 0px;
+}
+.navigation-right {
+	position: absolute;
+	left: auto;
+	right: 0px;
+}
+
+h3 {
+	font-size: 24px;
+	line-height: 1.25;
+	font-weight: 700;
+	letter-spacing: .023em;
+	margin: 10;
+	padding: 0;
+	white-space: normal;
+}
+
+h4 {
+	font-size: 18px;
+	color: var(--muted);
+	line-height: 1.22226;
+	font-weight: 400;
+	letter-spacing: .027em;
+	font-family: "SF Pro Display","SF Pro Icons","Apple WebExp Icons Custom","Helvetica Neue",Helvetica,Arial,sans-serif;
+	margin: 0	;
+	padding: 0;
+	white-space: normal;
+}
+
+hr {
+	border: 0.5px solid var(--hr);
+}
+
+p {
+	font-size: 14px;
+}
+
+p2 {
+	display: block !important;
+	margin-bottom: 1em;
+	font-size: 16px;
+	font-weight: 700;
+	color: #006600;
+}
+
+p3 {
+	display: block; /* Ensures it's treated like a paragraph */
+	margin-top: 1em;
+	font-weight: 500;
+	color: #FFFF00;
+	text-align: center; /* Aligns the content to the left */
+}
+
+p4 {
+	display: block; /* Ensures it's treated like a paragraph */
+	margin-top: 1em;
+	font-weight: 700;
+	color: #FFFFFF;
+	text-align: center; /* Aligns the content to the left */
+}
+
+.content {
+	max-width: 625px;
+	min-width: 340px;
+	margin: auto;
+}
+
+.content.privacy {
+	max-width:700px;
+	min-width: 340px;
+	margin: auto;
+}
+
+.language
+{
+	width: 35px;
+	float: left;
+
+}
+.left
+{
+	width: 230px;
+	float: left;
+
+}
+.left2
+{
+	padding-top: 10px;
+	width: 320px;
+	float: left;
+
+}
+
+.right
+{
+	width: 350px;
+	float: right;
+	padding-top: 10px;
+
+}
+
+.appicon {
+	width: 200px;
+	border-radius: 25px;
+}
+
+.image-portrait {
+	width: 200px;
+	box-shadow:0 5px 15px 0 rgba(0,0,0,0.6);
+}
+
+.appicon-small {
+	width: 128px;
+	border-radius: 8px;
+	box-shadow:0 5px 15px 0 rgba(0,0,0,0.6);
+}
+
+.appicon-mini {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 48px;
+	border-radius: 8px;
+	box-shadow:0 5px 15px 0 rgba(0,0,0,0.6);
+}
+
+.app {
+}
+
+.app:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.app-header {
+	 display: grid;
+	 grid-template-columns: 1fr auto 1fr;   /* title centers in the auto column */
+	 align-items: baseline;
+	 column-gap: 0.75rem;
+}
+
+.app-header .app-title {
+	 margin: 0;                 /* remove default h3 margins */
+	 grid-column: 2;
+	 justify-self: center;
+}
+
+.app-header .platforms {
+	 grid-column: 3;
+	 justify-self: start;       /* platforms sit immediately right of the title */
+	 float: none;
+	 margin: 0;
+}
+
+.appbody {
+}
+
+a:link {
+	color: var(--link);
+	text-decoration: none;
+}
+
+a:visited {
+	color: var(--link);
+	text-decoration: none;
+}
+
+a:hover {
+	color: var(--link);
+	text-decoration: none;
+}
+
+a:active {
+	color: var(--link);
+	text-decoration: none;
+}
+
+.appbutton {
+	line-height: 3;
+	font-size: 13px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: var(--button-border);
+	background: 0 0;
+	color: var(--button-text);
+	border-radius: 4px;
+	padding: 8px;
+	display: inline;
+}
+
+.appbutton span {
+	font-weight: 500;
+}
+
+.appbutton:hover {
+	background: var(--button-hover-bg);
+}
+
+.appbutton.whatsnew {
+	display: inline-block;
+	line-height: 1.4;
+	font-size: 15px;
+	padding: 8px 16px;
+	margin: 4px 0 12px;
+}
+
+.platforms {
+	line-height: 1.38462;
+	font-weight: 600;
+	letter-spacing: -.005em;
+	font-style: normal;
+	font-size: 13px;
+	display: inline-block;
+	list-style: none;
+	color: var(--platforms);
+	margin: 8px;
+	padding: 0;
+	float:right;
+	font-family: "SF Pro Text","SF Pro Icons","Apple WebExp Icons Custom","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.platforms li {
+	display: inline-block;
+	margin-right: 4px;
+}
+
+.center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.table-cell {
+	height: 64px;
+	width: 64px;
+}
+
+table {
+	padding: 50;
+}
+
+.collection-cell {
+	max-width: 250px;
+}
+
+
+.screenshot {
+	max-width: 100%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.container {
+	width: 85%; /* Set the desired width of your container */
+	margin: auto; /* Center the container */
+	text-align: center; /* Center the content horizontally */
+}
+
+.container2 {
+	width: 85%; /* Set the desired width of your container */
+	margin: auto; /* Center the container */
+	text-align: center; /* Center the content horizontally */
+}
+
+.container img {
+	max-width: 100%; /* Set the maximum width of the image to 100% of its container */
+	height: auto; /* Maintain the aspect ratio */
+	display: block; /* Remove any extra spacing below the image */
+	margin: auto; /* Center the image within the container */
+	border-radius: 16px; /* Adjust the border-radius as needed for the desired rounded corners */
+	background-color: #365B9F;
+}
+
+.container2 img {
+	max-width: 100%; /* Set the maximum width of the image to 100% of its container */
+	height: auto; /* Maintain the aspect ratio */
+	display: block; /* Remove any extra spacing below the image */
+	margin: auto; /* Center the image within the container */
+}
+
+.grid-container {
+	 display: grid;
+	 grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+	 gap: 10px; /* space between images */
+	 box-sizing: border-box; /* padding counts toward the width */
+	 width: auto; /* fill only the space beside the floated flag column, so the grid doesn't drop below it on narrow screens */
+	 background-color: #31539C; /* blue background */
+	 padding: 15px; /* padding inside the container */
+	 border-radius: 15px; /* rounded corners for the grid container */
+/*	 max-width: 600px; /* optional: restrict max grid width */
+}
+
+.grid-container img {
+	 width: 100%;
+	 height: auto;
+	 display: block;
+	 object-fit: cover;
+	 border: 1px solid #ccc; /* optional border for visual separation */
+	 border-radius: 3px; /* override the larger radius inherited from .container img */
+}
+
+.boxed-content {
+	 padding-left: 20px;
+	 padding-right: 20px;
+	 padding-bottom: 20px;
+	 border: 1px solid black;
+	 background-color: #31539C;
+	 margin-top: 1em;
+	 border-radius: 15px;
+
+}
+
+.coming-soon {
+	display: inline-block;
+	font-size: 13px;
+	font-weight: 600;
+	letter-spacing: -.005em;
+	color: var(--coming-soon);
+	border: 1px solid var(--coming-soon);
+	border-radius: 4px;
+	padding: 8px 12px;
+	font-family: "SF Pro Text","SF Pro Icons","Apple WebExp Icons Custom","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+@media (max-width: 899px) {
+	.apps-grid .app .appbody.language {
+		float: left;
+		width: 35px;
+		padding-top: 0;
+	}
+	.apps-grid .app .appbody.left {
+		float: left;
+		width: auto;
+		padding-top: 0;
+	}
+	.apps-grid .app .appbody.left .screenshot {
+		max-width: 230px;
+	}
+	.apps-grid .app .appbody.right {
+		clear: both;
+		float: none;
+		width: 230px;
+		max-width: 100%;
+		margin-left: 35px;
+		padding-top: 12px;
+	}
+	.apps-grid .mac-column .app .appbody.right {
+		margin-left: 0;
+	}
+}
+
+@media (min-width: 900px) {
+	.content {
+		max-width: 1100px;
+	}
+	.apps-grid {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		gap: 32px;
+		align-items: start;
+	}
+	.apps-grid > * {
+		min-width: 0;
+	}
+	.apps-grid .app {
+		display: grid;
+		grid-template-columns: 35px 1fr;
+		grid-template-areas:
+			"language left"
+			"language right";
+		column-gap: 8px;
+	}
+	.apps-grid .app:after {
+		display: none;
+	}
+	.apps-grid .app .appbody.language {
+		grid-area: language;
+		width: auto;
+		float: none;
+	}
+	.apps-grid .app .appbody.left {
+		grid-area: left;
+		width: 100%;
+		float: none;
+	}
+	.apps-grid .app .appbody.right {
+		grid-area: right;
+		width: 100%;
+		float: none;
+		padding-top: 12px;
+	}
+	.apps-grid .ios-column .app .appbody.left .screenshot {
+		max-width: 230px;
+	}
+	.apps-grid .mac-column .app .appbody.left .screenshot {
+		max-width: 100%;
+		max-height: 469px;
+		width: auto;
+		height: auto;
+	}
+}
+
+a.testflight-button,
+a.testflight-button:link,
+a.testflight-button:visited,
+a.testflight-button:hover,
+a.testflight-button:focus,
+a.testflight-button:active {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.625rem;
+	padding: 0.5rem 1.25rem 0.5rem 0.625rem;
+	background-color: #007aff;
+	color: #ffffff;
+	font-size: 1rem;
+	font-weight: 600;
+	text-decoration: none;
+	border-radius: 10px;
+	transition: background-color 0.15s ease;
+}
+a.testflight-button:hover,
+a.testflight-button:focus {
+	background-color: #0062cc;
+	color: #ffffff;
+}
+.testflight-button-icon {
+	height: 3em;
+	width: 3em;
+	border-radius: 8px;
+	display: block;
+}

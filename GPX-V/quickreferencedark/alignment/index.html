@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>The Synchronize Panel</title>
+<link rel="stylesheet" href="../tutorial.css">
+</head>
+<body style="min-height: 100vh; margin: 0; background-image: linear-gradient(var(--bg-start), var(--bg-end)); background-repeat: no-repeat; background-size: cover;">
+<a class="home" href="../index.html" title="GPX-V Quick Reference Home"><img src="../home-icon.png" alt=""> GPX-V Quick Reference Home</a>
+<h1>The Synchronize Panel</h1>
+<div class="caption" style="max-width: 1100px;"><span class="title" id="capTitle"></span> <span id="capExplanation"></span></div>
+<div class="tutorial" id="tutorial" style="aspect-ratio: 1100 / 780; max-width: 1100px;">
+<img src="screenshot.png" alt="Tutorial screenshot">
+<div class="hotspot topmost" id="item-0" data-index="0" data-title="Synchronize Panel" data-explanation="synchronizes the video and the GPS track using a single matching moment." style="left:0.0000%; top:0.0000%; width:100.0000%; height:100.0000%;" title="Synchronize Panel"></div>
+<div class="hotspot" id="item-1" data-index="1" data-title="The Instructions" data-explanation="show how to register the video against the GPS track: match a video frame to a trackpoint, then align." style="left:0.9091%; top:4.6795%; width:98.1818%; height:2.0513%;" title="The Instructions"></div>
+<div class="hotspot" id="item-2" data-index="2" data-title="The Video Player" data-explanation="scrubs the video to a moment you can pinpoint on the map." style="left:1.0909%; top:9.4231%; width:48.3636%; height:46.0256%;" title="The Video Player"></div>
+<div class="hotspot" id="item-3" data-index="3" data-title="The Route Map" data-explanation="displays the GPS track; the selected trackpoint is marked with a pin. Shift-click the map to jump to the nearest trackpoint." style="left:50.5455%; top:9.4231%; width:48.3636%; height:46.0256%;" title="The Route Map"></div>
+<div class="hotspot" id="item-4" data-index="4" data-title="The Map / Satellite Control" data-explanation="switches the map between standard and satellite imagery." style="left:51.2727%; top:10.4487%; width:10.5909%; height:3.0769%;" title="The Map / Satellite Control"></div>
+<div class="hotspot" id="item-5" data-index="5" data-title="The Trackpoint Table" data-explanation=" selects the trackpoint that matches the current video frame." style="left:1.0909%; top:56.9872%; width:97.8182%; height:33.2692%;" title="The Trackpoint Table"></div>
+<div class="hotspot" id="item-6" data-index="6" data-title="The Summary" data-explanation="shows how far the video will shift for the chosen pair, and whether it then overlaps the GPS track." style="left:0.9091%; top:91.7949%; width:98.1818%; height:2.0513%;" title="The Summary"></div>
+<div class="hotspot" id="item-7" data-index="7" data-title="Trim Overlap" data-explanation="after aligning, trim the video and track down to the range they share." style="left:1.0909%; top:95.8974%; width:20.6818%; height:2.0513%;" title="Trim Overlap"></div>
+<div class="hotspot" id="item-8" data-index="8" data-title="The Cancel Button" data-explanation="dismisses this sheet without changing the video-GPS alignment." style="left:83.6364%; top:95.3846%; width:6.0000%; height:3.0769%;" title="The Cancel Button"></div>
+<div class="hotspot" id="item-9" data-index="9" data-title="The Align Button" data-explanation="applies the computed shift so the video lines up with the GPS track." style="left:90.7273%; top:95.3846%; width:8.1818%; height:3.0769%;" title="The Align Button"></div>
+</div>
+<p>This panel registers the video against the GPS track using a single matching moment.</p>
+<p>Scrub the video to a frame you can identify on the map, select the trackpoint at that spot, then click Align.</p>
+<p>Because both timelines run at real time, that one correspondence fixes the video's time offset.</p>
+<p>Optionally trim the video and track down to the range they share once aligned.</p>
+<script>
+(function(){
+  var hs = document.querySelectorAll('.hotspot');
+  var ct = document.getElementById('capTitle');
+  var ce = document.getElementById('capExplanation');
+  var active = null;
+  function show(h){ if (active) active.classList.remove('active'); active = h; if (h) h.classList.add('active'); ct.textContent = h ? h.getAttribute('data-title') : ''; ce.textContent = h ? h.getAttribute('data-explanation') : ''; }
+  hs.forEach(function(h){ h.addEventListener('mouseenter', function(){ show(h); }); h.addEventListener('click', function(){ show(h); }); });
+  var initial = null;
+  if (location.hash && location.hash.length > 1) { initial = document.getElementById(location.hash.substring(1)); if (initial && !initial.classList.contains('hotspot')) initial = null; }
+  if (!initial && hs.length > 0) initial = hs[0];
+  if (initial) show(initial);
+})();
+</script>
+<script>
+(function(){
+  var FROM = "quickreferencedark", TO = "quickreference", SELF_IS_DARK = true;
+  function go(){
+    if (!window.matchMedia) return;
+    var dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (dark === SELF_IS_DARK) return;
+    var seg = '/' + FROM + '/';
+    var path = location.pathname;
+    if (path.indexOf(seg) < 0) return;
+    var newPath = path.replace(seg, '/' + TO + '/');
+    location.replace(newPath + location.search + location.hash);
+  }
+  go();
+  if (window.matchMedia) {
+    var mq = window.matchMedia('(prefers-color-scheme: dark)');
+    if (mq.addEventListener) { mq.addEventListener('change', go); } else if (mq.addListener) { mq.addListener(go); }
+  }
+})();
+</script>
+</body>
+</html>

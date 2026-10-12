@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>The Trim  Panel</title>
+<link rel="stylesheet" href="../tutorial.css">
+</head>
+<body style="min-height: 100vh; margin: 0; background-image: linear-gradient(var(--bg-start), var(--bg-end)); background-repeat: no-repeat; background-size: cover;">
+<a class="home" href="../index.html" title="GPX-V Quick Reference Home"><img src="../home-icon.png" alt=""> GPX-V Quick Reference Home</a>
+<h1>The Trim  Panel</h1>
+<div class="caption" style="max-width: 900px;"><span class="title" id="capTitle"></span> <span id="capExplanation"></span></div>
+<div class="tutorial" id="tutorial" style="aspect-ratio: 899.5 / 510; max-width: 900px;">
+<img src="screenshot.png" alt="Tutorial screenshot">
+<div class="hotspot topmost" id="item-0" data-index="0" data-title="The Trim Panel" data-explanation="trims the selected video and trackpoints." style="left:0.0000%; top:0.0000%; width:100.0000%; height:100.0000%;" title="The Trim Panel"></div>
+<div class="hotspot" id="item-1" data-index="1" data-title="The Selected Range Label" data-explanation="shows the duration of the selected video and trackpoints." style="left:39.1329%; top:7.0588%; width:21.6787%; height:3.1373%;" title="The Selected Range Label"></div>
+<div class="hotspot" id="item-2" data-index="2" data-title="The Video Frame Preview" data-explanation="displays the first, middle, and last video frame selected." style="left:1.8899%; top:16.6667%; width:96.2201%; height:31.3725%;" title="The Video Frame Preview"></div>
+<div class="hotspot" id="item-3" data-index="3" data-title="The Elevation Chart" data-explanation="displays the elevation along the route and your selection." style="left:1.8899%; top:49.2157%; width:96.2201%; height:27.4510%;" title="The Elevation Chart"></div>
+<div class="hotspot" id="item-4" data-index="4" data-title="The Range Slider" data-explanation="selects the time range in the video and trackpoint list which will be deleted." style="left:1.8899%; top:78.8235%; width:96.2201%; height:3.9216%;" title="The Range Slider"></div>
+<div class="hotspot" id="item-5" data-index="5" data-title="The Clip Summary" data-explanation="describes your selected range." style="left:37.3541%; top:84.3137%; width:25.2362%; height:3.1373%;" title="The Clip Summary"></div>
+<div class="hotspot" id="item-6" data-index="6" data-title="The Preview Button" data-explanation="plays a  preview of what your video will look like after the selection is deleted." style="left:45.9700%; top:91.3725%; width:8.0044%; height:4.7059%;" title="The Preview Button"></div>
+<div class="hotspot" id="item-7" data-index="7" data-title="The Cancel Button" data-explanation="closes the panel without making any changes." style="left:83.9355%; top:91.3725%; width:7.3374%; height:4.7059%;" title="The Cancel Button"></div>
+<div class="hotspot" id="item-8" data-index="8" data-title="The Trim Button" data-explanation="removes the selected video and trackpoints from your project." style="left:92.1623%; top:91.3725%; width:5.6142%; height:4.7059%;" title="The Trim Button"></div>
+</div>
+<p>This panel trims a selected range of video and its associated trackpoints.</p>
+<p>Adjust the range using the elevation graph or the range slider, and preview how the video will look after the cut.</p>
+<p>Move your pointer over the images above to see feature explanations.</p>
+<script>
+(function(){
+  var hs = document.querySelectorAll('.hotspot');
+  var ct = document.getElementById('capTitle');
+  var ce = document.getElementById('capExplanation');
+  var active = null;
+  function show(h){ if (active) active.classList.remove('active'); active = h; if (h) h.classList.add('active'); ct.textContent = h ? h.getAttribute('data-title') : ''; ce.textContent = h ? h.getAttribute('data-explanation') : ''; }
+  hs.forEach(function(h){ h.addEventListener('mouseenter', function(){ show(h); }); h.addEventListener('click', function(){ show(h); }); });
+  var initial = null;
+  if (location.hash && location.hash.length > 1) { initial = document.getElementById(location.hash.substring(1)); if (initial && !initial.classList.contains('hotspot')) initial = null; }
+  if (!initial && hs.length > 0) initial = hs[0];
+  if (initial) show(initial);
+})();
+</script>
+<script>
+(function(){
+  var FROM = "quickreferencedark", TO = "quickreference", SELF_IS_DARK = true;
+  function go(){
+    if (!window.matchMedia) return;
+    var dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (dark === SELF_IS_DARK) return;
+    var seg = '/' + FROM + '/';
+    var path = location.pathname;
+    if (path.indexOf(seg) < 0) return;
+    var newPath = path.replace(seg, '/' + TO + '/');
+    location.replace(newPath + location.search + location.hash);
+  }
+  go();
+  if (window.matchMedia) {
+    var mq = window.matchMedia('(prefers-color-scheme: dark)');
+    if (mq.addEventListener) { mq.addEventListener('change', go); } else if (mq.addListener) { mq.addListener(go); }
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>The Speed Panel</title>
+<link rel="stylesheet" href="../tutorial.css">
+</head>
+<body style="min-height: 100vh; margin: 0; background-image: linear-gradient(var(--bg-start), var(--bg-end)); background-repeat: no-repeat; background-size: cover;">
+<a class="home" href="../index.html" title="GPX-V Quick Reference Home"><img src="../home-icon.png" alt=""> GPX-V Quick Reference Home</a>
+<h1>The Speed Panel</h1>
+<div class="caption" style="max-width: 1132px;"><span class="title" id="capTitle"></span> <span id="capExplanation"></span></div>
+<div class="tutorial" id="tutorial" style="aspect-ratio: 1132.5 / 540; max-width: 1132px;">
+<img src="screenshot.png" alt="Tutorial screenshot">
+<div class="hotspot topmost" id="item-0" data-index="0" data-title="The Speed Panel" data-explanation="raises or lowers video and trackpoint speeds for selected segments." style="left:0.0000%; top:0.0000%; width:100.0000%; height:100.0000%;" title="The Speed Panel"></div>
+<div class="hotspot" id="item-1" data-index="1" data-title="The Range Label" data-explanation="shows the start, finish and length of the video segment to which the speed adjustment will be applied." style="left:36.9978%; top:6.6667%; width:26.0044%; height:2.9630%;" title="The Range Label"></div>
+<div class="hotspot" id="item-2" data-index="2" data-title="The Table View" data-explanation="lists the speed adjustments you have applied." style="left:1.8543%; top:12.5926%; width:19.4260%; height:76.1111%;" title="The Table View"></div>
+<div class="hotspot" id="item-3" data-index="3" data-title="The Delete Button" data-explanation="deletes the selected speed adjustment." style="left:1.7660%; top:90.1852%; width:9.3598%; height:6.2963%;" title="The Delete Button"></div>
+<div class="hotspot" id="item-4" data-index="4" data-title="The Add Button" data-explanation="adds a new speed adjustment to the list." style="left:12.0088%; top:90.1852%; width:9.3598%; height:6.2963%;" title="The Add Button"></div>
+<div class="hotspot" id="item-5" data-index="5" data-title="The Frame Preview" data-explanation="shows the first, middle, and last video frames to which the speed adjustment will be applied." style="left:22.0751%; top:15.7407%; width:76.4238%; height:29.6296%;" title="The Frame Preview"></div>
+<div class="hotspot" id="item-6" data-index="6" data-title="The Elevation Chart" data-explanation="shows how your route changes elevation. Colors signal the gradient of the slope. Click to select a trackpoint, ⇧-click to select a range." style="left:22.0751%; top:46.4815%; width:76.4238%; height:25.9259%;" title="The Elevation Chart"></div>
+<div class="hotspot" id="item-7" data-index="7" data-title="The Direction Control" data-explanation="sets whether the speed will be adjusted up or down." style="left:45.1214%; top:79.0741%; width:15.9823%; height:4.4444%;" title="The Direction Control"></div>
+<div class="hotspot" id="item-8" data-index="8" data-title="The Factor Control" data-explanation="sets the factor for speed adjustment. 2x down slows 120 fps video to 60 fps video, adjusting trackpoint times to match." style="left:70.1545%; top:79.0741%; width:15.9823%; height:4.4444%;" title="The Factor Control"></div>
+<div class="hotspot" id="item-9" data-index="9" data-title="The Cancel button" data-explanation="discards the changes you made and quits this panel." style="left:86.4901%; top:91.8519%; width:5.8278%; height:4.4444%;" title="The Cancel button"></div>
+<div class="hotspot" id="item-10" data-index="10" data-title="The Apply/Confirm Changes button" data-explanation="saves any changes you made and quits this panel" style="left:93.0243%; top:91.8519%; width:5.2097%; height:4.4444%;" title="The Apply/Confirm Changes button"></div>
+</div>
+<p>This panel simultaneously applies speed adjustments to video and GPX segments.</p>
+<p>Primarily intended for videos recorded at 120 fps from cars, you can slow down to more appropriate speeds on the flats and uphills as needed.</p>
+<p>If you make a walking video you would like to speed up for cycling, it can do that as well.</p>
+<p>Move your pointer over the images above to see feature explanations.</p>
+<script>
+(function(){
+  var hs = document.querySelectorAll('.hotspot');
+  var ct = document.getElementById('capTitle');
+  var ce = document.getElementById('capExplanation');
+  var active = null;
+  function show(h){ if (active) active.classList.remove('active'); active = h; if (h) h.classList.add('active'); ct.textContent = h ? h.getAttribute('data-title') : ''; ce.textContent = h ? h.getAttribute('data-explanation') : ''; }
+  hs.forEach(function(h){ h.addEventListener('mouseenter', function(){ show(h); }); h.addEventListener('click', function(){ show(h); }); });
+  var initial = null;
+  if (location.hash && location.hash.length > 1) { initial = document.getElementById(location.hash.substring(1)); if (initial && !initial.classList.contains('hotspot')) initial = null; }
+  if (!initial && hs.length > 0) initial = hs[0];
+  if (initial) show(initial);
+})();
+</script>
+<script>
+(function(){
+  var FROM = "quickreferencedark", TO = "quickreference", SELF_IS_DARK = true;
+  function go(){
+    if (!window.matchMedia) return;
+    var dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (dark === SELF_IS_DARK) return;
+    var seg = '/' + FROM + '/';
+    var path = location.pathname;
+    if (path.indexOf(seg) < 0) return;
+    var newPath = path.replace(seg, '/' + TO + '/');
+    location.replace(newPath + location.search + location.hash);
+  }
+  go();
+  if (window.matchMedia) {
+    var mq = window.matchMedia('(prefers-color-scheme: dark)');
+    if (mq.addEventListener) { mq.addEventListener('change', go); } else if (mq.addListener) { mq.addListener(go); }
+  }
+})();
+</script>
+</body>
+</html>

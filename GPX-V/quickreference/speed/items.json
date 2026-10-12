@@ -1,0 +1,145 @@
+{
+  "compositeWidth" : 1132.5,
+  "windowRect" : {
+    "y" : 0,
+    "x" : 0,
+    "width" : 0,
+    "height" : 0
+  },
+  "items" : [
+    {
+      "x" : 0,
+      "localizedExplanation" : "raises or lowers video and trackpoint speeds for selected segments.",
+      "localizedName" : "The Speed Panel",
+      "y" : 0,
+      "height" : 540,
+      "width" : 1132.5,
+      "isSimulated" : false,
+      "explanation" : "raises or lowers video and trackpoint speeds for selected segments.",
+      "flagDoNotFill" : false,
+      "name" : "The Speed Panel"
+    },
+    {
+      "x" : 419,
+      "localizedExplanation" : "shows the start, finish and length of the video segment to which the speed adjustment will be applied.",
+      "localizedName" : "The Range Label",
+      "y" : 36,
+      "height" : 16,
+      "width" : 294.5,
+      "isSimulated" : false,
+      "explanation" : "shows the start, finish and length of the video segment to which the speed adjustment will be applied.",
+      "flagDoNotFill" : false,
+      "name" : "The Range Label"
+    },
+    {
+      "x" : 21,
+      "localizedExplanation" : "lists the speed adjustments you have applied.",
+      "localizedName" : "The Table View",
+      "y" : 68,
+      "height" : 411,
+      "width" : 220,
+      "isSimulated" : false,
+      "explanation" : "lists the speed adjustments you have applied.",
+      "flagDoNotFill" : false,
+      "name" : "The Table View"
+    },
+    {
+      "x" : 20,
+      "localizedExplanation" : "deletes the selected speed adjustment.",
+      "localizedName" : "The Delete Button",
+      "y" : 487,
+      "height" : 34,
+      "width" : 106,
+      "isSimulated" : false,
+      "explanation" : "deletes the selected speed adjustment.",
+      "flagDoNotFill" : false,
+      "name" : "The Delete Button"
+    },
+    {
+      "x" : 136,
+      "localizedExplanation" : "adds a new speed adjustment to the list.",
+      "localizedName" : "The Add Button",
+      "y" : 487,
+      "height" : 34,
+      "width" : 106,
+      "isSimulated" : false,
+      "explanation" : "adds a new speed adjustment to the list.",
+      "flagDoNotFill" : false,
+      "name" : "The Add Button"
+    },
+    {
+      "x" : 250,
+      "localizedExplanation" : "shows the first, middle, and last video frames to which the speed adjustment will be applied.",
+      "localizedName" : "The Frame Preview",
+      "y" : 85,
+      "height" : 160,
+      "width" : 865.5,
+      "isSimulated" : false,
+      "explanation" : "shows the first, middle, and last video frames to which the speed adjustment will be applied.",
+      "flagDoNotFill" : false,
+      "name" : "The Frame Preview"
+    },
+    {
+      "x" : 250,
+      "localizedExplanation" : "shows how your route changes elevation. Colors signal the gradient of the slope. Click to select a trackpoint, ⇧-click to select a range.",
+      "localizedName" : "The Elevation Chart",
+      "y" : 251,
+      "height" : 140,
+      "width" : 865.5,
+      "isSimulated" : false,
+      "explanation" : "shows how your route changes elevation. Colors signal the gradient of the slope. Click to select a trackpoint, ⇧-click to select a range.",
+      "flagDoNotFill" : false,
+      "name" : "The Elevation Chart"
+    },
+    {
+      "x" : 511,
+      "localizedExplanation" : "sets whether the speed will be adjusted up or down.",
+      "localizedName" : "The Direction Control",
+      "y" : 427,
+      "height" : 24,
+      "width" : 181,
+      "isSimulated" : false,
+      "explanation" : "sets whether the speed will be adjusted up or down.",
+      "flagDoNotFill" : false,
+      "name" : "The Direction Control"
+    },
+    {
+      "x" : 794.5,
+      "localizedExplanation" : "sets the factor for speed adjustment. 2x down slows 120 fps video to 60 fps video, adjusting trackpoint times to match.",
+      "localizedName" : "The Factor Control",
+      "y" : 427,
+      "height" : 24,
+      "width" : 181,
+      "isSimulated" : false,
+      "explanation" : "sets the factor for speed adjustment. 2x down slows 120 fps video to 60 fps video, adjusting trackpoint times to match.",
+      "flagDoNotFill" : false,
+      "name" : "The Factor Control"
+    },
+    {
+      "x" : 979.5,
+      "localizedExplanation" : "discards the changes you made and quits this panel.",
+      "localizedName" : "The Cancel button",
+      "y" : 496,
+      "height" : 24,
+      "width" : 66,
+      "isSimulated" : false,
+      "explanation" : "discards the changes you made and quits this panel.",
+      "flagDoNotFill" : false,
+      "name" : "The Cancel button"
+    },
+    {
+      "x" : 1053.5,
+      "localizedExplanation" : "saves any changes you made and quits this panel",
+      "localizedName" : "The Apply\/Confirm Changes button",
+      "y" : 496,
+      "height" : 24,
+      "width" : 59,
+      "isSimulated" : false,
+      "explanation" : "saves any changes you made and quits this panel",
+      "flagDoNotFill" : false,
+      "name" : "The Apply\/Confirm Changes button"
+    }
+  ],
+  "title" : "The Speed Panel",
+  "compositeHeight" : 540
+}
