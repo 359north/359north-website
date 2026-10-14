@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		780909B3307EC1ED00CAADF9 /* privacy-policy-draft.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "privacy-policy-draft.html"; sourceTree = "<group>"; };
 		7824991C2B67166900FBBE33 /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		782499302B6989C400FBBE33 /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		783C50E02F902C4D00FFB3D3 /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
@@ -2047,7 +2046,6 @@
 				97D5B1CC2858161100B5433A /* snippets.not.to.be.committed */,
 				975E7073284BE3EB00241F55 /* privacy-policy-2022.html */,
 				975E7072284BE3EB00241F55 /* privacy-policy.html */,
-				780909B3307EC1ED00CAADF9 /* privacy-policy-draft.html */,
 				9726ECE22853F22F002E7BDD /* contact.html */,
 				786480EC29A574210059B3E5 /* team.html */,
 				975E7076284BE3EB00241F55 /* icons */,
